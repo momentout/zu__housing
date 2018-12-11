@@ -15,4 +15,5 @@ public interface HouselistService {
 	void updatehouse(Houselist houselist);
 	void updatehousestatus(Houselist houselist);
 	public void deletehousebyhouseid(String house_id);
+	Houselist findAddress(String address) ;
 }

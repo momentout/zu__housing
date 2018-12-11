@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>房屋租赁系统</title>
-<link rel="stylesheet" type="text/css" href="/text2/css/styles.css">
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
 <div class="wrapper">
@@ -49,10 +49,10 @@
 	
 </div>
 
-<script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="/text2/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
 <script type="text/javascript"
-    src="/text2/js/localization/messages_zh.js"></script>
+    src="/js/localization/messages_zh.js"></script>
 <script type="text/javascript">
 
 

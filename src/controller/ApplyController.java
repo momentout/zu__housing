@@ -62,7 +62,7 @@ public class ApplyController {
 	//管理员查看申请看房列表
 	@RequestMapping("/findapplylist")
 	public String findapplylist(Model model,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize) throws Exception{
+            @RequestParam(required=false,defaultValue="10") Integer pageSize) throws Exception{
 		 PageHelper.startPage(page, pageSize);
 		List<Apply> applylist=applyService.findapplylist();
 		PageInfo<Apply> p=new PageInfo<Apply>(applylist);
@@ -101,7 +101,7 @@ public class ApplyController {
 	//租客查看自己的 看房申请
 	@RequestMapping("/getmyapply")
 	public String getmyapply(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 		User user1= (User) httpSession.getAttribute("user");
 		Userlist userlist=userlistService.findhasuserlist(user1.getId());
 		PageHelper.startPage(page, pageSize);

@@ -86,4 +86,7 @@
 	<delete id="deletehousebyhouseid" parameterType="String" >
 		delete from houselist where houseid=#{houseid}
 	</delete>
+	<select id="findAddress" parameterType="String" resultType="Pojo.Houselist">
+	select * from houselist where address=#{address}
+	</select>
 </mapper>

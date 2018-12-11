@@ -17,4 +17,5 @@ void updatehouse(Houselist houselist);
 void updatehousestatus(Houselist houselist);
 public void deletehousebyhouseid(String house_id);
 public void updatestatus(Houselist houselist);
+Houselist findAddress(String address);
 }

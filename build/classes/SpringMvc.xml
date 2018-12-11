@@ -20,9 +20,9 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- 真正的页面路径 =  前缀 + 去掉后缀名的页面名称 + 后缀 -->
 		<!-- 前缀 -->
-		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
 		<!-- 后缀 -->
-		<property name="suffix" value=".jsp"></property>
+		<property name="suffix" value=".jsp"/>
 	</bean>
 	
 	<!-- 配置自定义转换器 

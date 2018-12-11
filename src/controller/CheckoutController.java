@@ -31,7 +31,7 @@ public class CheckoutController {
 	
 	@RequestMapping("/getallcheckout")
 	public String getallcheckout(Model model ,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 		 PageHelper.startPage(page, pageSize);
 		List<Checkout> checkout=checkoutService.getallcheckout();
 		PageInfo<Checkout> p=new PageInfo<Checkout>(checkout);
@@ -55,7 +55,7 @@ public class CheckoutController {
 	
 	@RequestMapping("/getmycheckout")
 	public String getmycheckout(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize) {
+            @RequestParam(required=false,defaultValue="10") Integer pageSize) {
 		User user1= (User) httpSession.getAttribute("user");
 		Userlist userlist=userlistService.findhasuserlist(user1.getId());
 		PageHelper.startPage(page, pageSize);

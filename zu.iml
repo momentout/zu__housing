@@ -21,6 +21,24 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="web application context" name="MVC application context" removed="true">
+          <file>file://$MODULE_DIR$/src/ApplicationContext-service.xml</file>
+          <file>file://$MODULE_DIR$/src/ApplicationContext-trans.xml</file>
+          <file>file://$MODULE_DIR$/src/ApplicationContext-dao.xml</file>
+        </fileset>
+        <fileset id="web springMvc servlet context" name="MVC springMvc servlet context" removed="true">
+          <file>file://$MODULE_DIR$/src/SpringMvc.xml</file>
+        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/ApplicationContext-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/ApplicationContext-service.xml</file>
+          <file>file://$MODULE_DIR$/src/ApplicationContext-trans.xml</file>
+          <file>file://$MODULE_DIR$/src/SpringMvc.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/build/classes" />

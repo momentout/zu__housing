@@ -42,7 +42,7 @@ public class ApplyoutController {
 	//查看退租申请
 	@RequestMapping("/findallapplyout")
 	public String findallapplyout(Model model ,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 		PageHelper.startPage(page, pageSize);
 		List<Applyout> applyout=applyoutService.findallapplyout();
 		PageInfo<Applyout> p=new PageInfo<Applyout>(applyout);
@@ -78,7 +78,7 @@ public class ApplyoutController {
 		//租客查看自己的 退房申请
 		@RequestMapping("/getmyapplyout")
 		public String getmyapplyout(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
-	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+	            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 			User user1= (User) httpSession.getAttribute("user");
 			Userlist userlist=userlistService.findhasuserlist(user1.getId());
 			PageHelper.startPage(page, pageSize);

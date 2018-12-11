@@ -68,6 +68,11 @@ public class HouselistServiceImpl implements HouselistService {
 		
 	}
 
+	@Override
+	public Houselist findAddress(String address) {
+		Houselist list=houselistMapper.findAddress(address);
+		return list;
+	}
 	
 
 }

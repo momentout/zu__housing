@@ -39,7 +39,7 @@ public class PaidController {
 	//管理员查找所有已缴租金列表
 	@RequestMapping("/selectall")
 	public String selectall(Model model,QueryVo vo,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 		PageHelper.startPage(page, pageSize);
 		List<Paid> list=paidService.selectall(vo);
 		PageInfo<Paid> p=new PageInfo<Paid>(list);
@@ -54,7 +54,7 @@ public class PaidController {
 	//租客查找自己已缴租金列表
 		@RequestMapping("/findmypaid")
 		public String findmypaid(HttpSession httpSession,Model model,QueryVo vo,@RequestParam(required=false,defaultValue="1") Integer page,
-	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+	            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 			User user1= (User) httpSession.getAttribute("user");
 			Userlist userlist=userlistService.findhasuserlist(user1.getId());
 			
@@ -85,7 +85,7 @@ public class PaidController {
 	//跳到我要收租页面
 	@RequestMapping("/showaddpaid")
 	public String showaddpaid(Model model,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize)throws Exception{
+            @RequestParam(required=false,defaultValue="10") Integer pageSize)throws Exception{
 		PageHelper.startPage(page, pageSize);
 		List<Zulist> list=paidService.findzuuserlist();
 		PageInfo<Zulist> p=new PageInfo<Zulist>(list);
@@ -113,7 +113,7 @@ public class PaidController {
 		//管理员查看所有未缴租金信息
 		@RequestMapping("/topaidlist")
 		public String topaidlist(Model model,@RequestParam(required=false,defaultValue="1") Integer page,
-	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+	            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 			QueryVo vo=new QueryVo();
 			PageHelper.startPage(page, pageSize);
 			List<Topaid> list=topaidService.findtopaid(vo);
@@ -126,7 +126,7 @@ public class PaidController {
 		//租客查看自己的未缴租金
 		@RequestMapping("/mytopaidlist")
 		public String mytopaidlist(Model model,HttpSession httpSession,@RequestParam(required=false,defaultValue="1") Integer page,
-	            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+	            @RequestParam(required=false,defaultValue="10") Integer pageSize){
 			User user1= (User) httpSession.getAttribute("user");
 			Userlist userlist=userlistService.findhasuserlist(user1.getId());
 			QueryVo vo=new QueryVo();

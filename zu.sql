@@ -50,8 +50,8 @@ CREATE TABLE `applyout` (
 -- ----------------------------
 -- Records of applyout
 -- ----------------------------
-INSERT INTO `applyout` VALUES ('3', 'b1', '桃源居', '已拒绝', '10');
-INSERT INTO `applyout` VALUES ('6', 'k2', '贝岗街18号', '已拒绝', '15');
+INSERT INTO `applyout` VALUES ('3', 'b1', '北京路25号', '已拒绝', '10');
+INSERT INTO `applyout` VALUES ('6', 'k2', '南京路23号', '已拒绝', '15');
 
 -- ----------------------------
 -- Table structure for checkout
@@ -69,8 +69,8 @@ CREATE TABLE `checkout` (
 -- ----------------------------
 -- Records of checkout
 -- ----------------------------
-INSERT INTO `checkout` VALUES ('2', 'k2', '贝岗街18号', '已退租', '15');
-INSERT INTO `checkout` VALUES ('3', 'c1', '广药1-364', '已退租', '10');
+INSERT INTO `checkout` VALUES ('2', 'k2', '南京路23号', '已退租', '15');
+INSERT INTO `checkout` VALUES ('3', 'c1', '梅花园6栋5号', '已退租', '10');
 
 -- ----------------------------
 -- Table structure for hetong
@@ -94,7 +94,7 @@ CREATE TABLE `hetong` (
 -- ----------------------------
 -- Records of hetong
 -- ----------------------------
-INSERT INTO `hetong` VALUES ('5', '张三', '440411199208018201', '李四', '440421199509088888', '2017-09-01', '2018-09-14', '900.00', '菊花园', 'c3', '2');
+INSERT INTO `hetong` VALUES ('5', '林林涵', '440411199208018201', '林胜涵', '440421199509088888', '2018-09-01', '2019-09-14', '900.00', '西湖路99号2栋202', 'c3', '2');
 
 -- ----------------------------
 -- Table structure for houselist
@@ -113,10 +113,10 @@ CREATE TABLE `houselist` (
 -- ----------------------------
 -- Records of houselist
 -- ----------------------------
-INSERT INTO `houselist` VALUES ('16', 'c3', '菊花园1-364', '60', '700.00', '已租赁');
-INSERT INTO `houselist` VALUES ('17', 'k1', '东风街13号', '63.2', '1300.00', '已租赁');
-INSERT INTO `houselist` VALUES ('20', 'b5', '穗石村18号', '60', '700.00', '未租赁');
-INSERT INTO `houselist` VALUES ('21', 'k8', '穗石村1号', '66', '800.00', '未租赁');
+INSERT INTO `houselist` VALUES ('16', 'c3', '阳东村34号', '60', '700.00', '已租赁');
+INSERT INTO `houselist` VALUES ('17', 'k1', '东海大道15号', '63.2', '1300.00', '已租赁');
+INSERT INTO `houselist` VALUES ('20', 'b5', '汕尾城区临海街8梯102', '60', '700.00', '未租赁');
+INSERT INTO `houselist` VALUES ('21', 'k8', '东约新村二巷9号', '66', '800.00', '未租赁');
 
 -- ----------------------------
 -- Table structure for paid
@@ -138,11 +138,11 @@ CREATE TABLE `paid` (
 -- ----------------------------
 -- Records of paid
 -- ----------------------------
-INSERT INTO `paid` VALUES ('5', 'c1', '广药1-364', '500.00', '2017-09-14', '2017-09-27', '赵颖欣', '10', '租金已缴');
-INSERT INTO `paid` VALUES ('6', 'c3', '菊花园1-364', '700.00', '2017-09-30', '2017-09-28', '李四', '12', '租金已缴');
-INSERT INTO `paid` VALUES ('7', 'c2', '碧桂园1-364', '4365.00', '2017-10-31', '2017-10-08', '张三', '14', '租金已缴');
-INSERT INTO `paid` VALUES ('8', 'k2', '贝岗街18号', '700.00', '2017-10-31', '2017-10-10', '张思', '15', '租金已缴');
-INSERT INTO `paid` VALUES ('9', 'c1', '广药1-364', '5000.00', '2017-10-31', '2017-10-10', '赵颖欣', '10', '租金已缴');
+INSERT INTO `paid` VALUES ('5', 'c1', '梅花园6栋5号', '500.00', '2018-09-14', '2018-09-27', '王小明', '10', '租金已缴');
+INSERT INTO `paid` VALUES ('6', 'c3', '阳东村34号', '700.00', '2018-09-30', '2018-09-28', '林小白', '12', '租金已缴');
+INSERT INTO `paid` VALUES ('7', 'c2', '幸福大道265号', '4365.00', '2018-10-31', '2018-10-08', '马小丽', '14', '租金已缴');
+INSERT INTO `paid` VALUES ('8', 'k2', '南京路23号', '700.00', '2018-10-31', '2019-10-10', '张麻子', '15', '租金已缴');
+INSERT INTO `paid` VALUES ('9', 'c1', '梅花园6栋5号', '5000.00', '2018-10-31', '2019-10-10', '王小明', '10', '租金已缴');
 
 -- ----------------------------
 -- Table structure for schedule
@@ -158,8 +158,8 @@ CREATE TABLE `schedule` (
 -- ----------------------------
 -- Records of schedule
 -- ----------------------------
-INSERT INTO `schedule` VALUES ('2', '2017-09-08', '收数');
-INSERT INTO `schedule` VALUES ('3', '2017-09-20', '今天是收租日');
+INSERT INTO `schedule` VALUES ('2', '2018-09-08', '收数');
+INSERT INTO `schedule` VALUES ('3', '2018-09-20', '今天是收租日');
 
 -- ----------------------------
 -- Table structure for solve
@@ -180,11 +180,11 @@ CREATE TABLE `solve` (
 -- ----------------------------
 -- Records of solve
 -- ----------------------------
-INSERT INTO `solve` VALUES ('4', 'c1', '广药1-364', '2017-09-08', 'kk', '赵颖欣', '10', '已处理');
-INSERT INTO `solve` VALUES ('5', 'c3', '菊花园1-364', '2017-09-28', '天花板漏水', '李四', '12', '已处理');
-INSERT INTO `solve` VALUES ('6', 'c2', '碧桂园1-364', '2017-10-08', '窗户坏了', '张三', '14', '已处理');
-INSERT INTO `solve` VALUES ('7', 'k2', '贝岗街18号', '2017-10-10', '天花板漏水', '张思', '15', '已处理');
-INSERT INTO `solve` VALUES ('8', 'c1', '广药1-364', '2017-10-09', '空调漏水', '赵颖欣', '10', '已处理');
+INSERT INTO `solve` VALUES ('4', 'c1', '梅花园6栋5号', '2018-09-08', '门锁坏了', '王小明', '10', '已处理');
+INSERT INTO `solve` VALUES ('5', 'c3', '阳东村34号', '2018-09-28', '天花板漏水', '林小白', '12', '已处理');
+INSERT INTO `solve` VALUES ('6', 'c2', '幸福大道265号', '2018-10-08', '窗户坏了', '马小丽', '14', '已处理');
+INSERT INTO `solve` VALUES ('7', 'k2', '南京路23号', '2018-10-10', '天花板漏水', '张麻子', '15', '已处理');
+INSERT INTO `solve` VALUES ('8', 'c1', '梅花园6栋5号', '2018-10-09', '空调漏水', '王小明', '10', '已处理');
 
 -- ----------------------------
 -- Table structure for topaid
@@ -222,9 +222,9 @@ CREATE TABLE `user` (
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', 'admin', '123456', 'admin');
-INSERT INTO `user` VALUES ('2', '赵颖欣', '12345', 'zuke');
-INSERT INTO `user` VALUES ('3', 'zyx', '12345', 'zuke');
-INSERT INTO `user` VALUES ('5', 'cwy', '12345', 'zuke');
+INSERT INTO `user` VALUES ('2', '王小明', '12345', 'zuke');
+INSERT INTO `user` VALUES ('3', '林林涵', '12345', 'zuke');
+INSERT INTO `user` VALUES ('5', 'zuke', '12345', 'zuke');
 
 -- ----------------------------
 -- Table structure for userlist
@@ -282,5 +282,5 @@ CREATE TABLE `zulist` (
 -- ----------------------------
 -- Records of zulist
 -- ----------------------------
-INSERT INTO `zulist` VALUES ('7', 'c3', '700.00', '菊花园1-364', '12', '5');
+INSERT INTO `zulist` VALUES ('7', 'c3', '700.00', '梅花园6栋5号', '12', '5');
 SET FOREIGN_KEY_CHECKS=1;
